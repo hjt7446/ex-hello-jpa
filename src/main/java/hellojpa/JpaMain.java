@@ -17,7 +17,14 @@ public class JpaMain {
 
         try {
 
-            Movie movie = new Movie();
+            Member member = new Member();
+            member.setName("hello");
+            member.setHomeAddress(new Address("city", "street", "10"));
+            member.setWorkPeriod(new Period());
+
+            em.persist(member);
+
+            /*Movie movie = new Movie();
             movie.setDirector("aaaa");
             movie.setActor("bbb");
             movie.setName("바람과함께사라지다");
@@ -29,7 +36,7 @@ public class JpaMain {
             em.clear();
 
             Movie findMovie = em.find(Movie.class, movie.getId());
-            System.out.println("findMove = " + findMovie);
+            System.out.println("findMove = " + findMovie);*/
 
             // 저장
             /*Team team = new Team();
